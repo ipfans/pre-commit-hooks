@@ -11,3 +11,9 @@ repos:
       - id: shell-lint
         args:
           - "--format=json"
+  - repo: https://github.com/ipfans/pre-commit-hooks
+    rev: v0.1.0
+    hooks:
+      - id: commig-msg-checker
+        stages:
+          - commit-msg
