@@ -83,9 +83,9 @@
   description: "Runs `go mod tidy -v`, requires golang"
 - id: commig-msg-checker
   name: "Commig message checker"
-  entry: run-commit-msg-checker.py
+  entry: python3 run-commit-msg-checker.py
   always_run: true
   stages:
     - commit-msg
-  language: "system"
+  language: "python"
   description: "Check commit message with rules: https://www.conventionalcommits.org/en/v1.0.0/"

@@ -11,9 +11,11 @@ repos:
       - id: shell-lint
         args:
           - "--format=json"
-  - repo: https://github.com/ipfans/pre-commit-hooks
-    rev: v0.1.1
+  - repo: local
     hooks:
       - id: commig-msg-checker
+        name: "Commig message checker"
+        language: "python"
+        entry: python3 run-commit-msg-checker.py
         stages:
           - commit-msg

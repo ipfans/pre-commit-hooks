@@ -15,12 +15,13 @@ changes_types = [
     "misc",
 ]
 
-regexp = re.compile(r"^(%s)\(\w+\)?!?:\s(.*)$" % "|".join(changes_types))
+regexp = re.compile(r"^({})(\(\w+\))?!?:\s.*$".format("|".join(changes_types)))
 with open(sys.argv[1], "r") as f:
     data = f.read()
     matched = regexp.match(data)
     if matched is None:
-        print("Please use the correct commit message format.")
+        print("Please use the correct commit message format.\n")
+        print(data)
         exit(-1)
     if len(matched.group(0)) < 15:
         print(
