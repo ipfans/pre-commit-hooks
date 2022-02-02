@@ -1,0 +1,68 @@
+- id: go-fumpt
+  name: "gofumpt"
+  entry: run-gofumpt.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `gofumpt`, requires `mvdan.cc/gofumpt`"
+- id: go-imports
+  name: "go imports"
+  entry: run-go-imports.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `goimports`, requires `golang.org/x/tools/cmd/goimports`"
+- id: go-vet
+  name: "go vet"
+  entry: run-go-vet.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `go vet`, requires golang"
+- id: go-cyclo
+  name: "go-cyclo"
+  entry: run-go-cyclo.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `gocyclo`, requires `github.com/fzipp/gocyclo/cmd/gocyclo`"
+  args: [-over=15]
+- id: golangci-lint
+  name: "golangci-lint"
+  entry: run-golangci-lint.sh
+  types: [go]
+  language: "script"
+  pass_filenames: false
+  description: "Runs `golangci-lint`, requires `github.com/golangci/golangci-lint/cmd/golangci-lint`"
+- id: go-critic
+  name: "go-critic"
+  entry: run-go-critic.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `go-critic`, requires `github.com/go-critic/go-critic/cmd/gocritic`"
+- id: go-unit-tests
+  name: "go-unit-tests"
+  entry: run-go-unit-tests.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `go test`, requires golang"
+- id: go-build
+  name: "go-build"
+  entry: run-go-build.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `go build`, requires golang"
+- id: go-generate
+  name: "go-generate"
+  entry: run-go-generate.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `go generate`, requires golang"
+- id: go-mod-tidy
+  name: "go-mod-tidy"
+  entry: run-go-mod-tidy.sh
+  files: '\.go$'
+  language: "script"
+  description: "Runs `go mod tidy -v`, requires golang"
+- id: commig-msg-checker
+  name: "Commig message checker"
+  entry: run-commig-msg-checker.py
+  always_run: true
+  language: "system"
+  description: "Check commit message with rules: https://www.conventionalcommits.org/en/v1.0.0/"
