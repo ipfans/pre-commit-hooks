@@ -64,5 +64,6 @@
   name: "Commig message checker"
   entry: run-commig-msg-checker.py
   always_run: true
+  stages: [commit-msg]
   language: "system"
   description: "Check commit message with rules: https://www.conventionalcommits.org/en/v1.0.0/"
