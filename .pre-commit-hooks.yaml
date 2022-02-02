@@ -81,8 +81,8 @@
   stages:
     - commit
   description: "Runs `go mod tidy -v`, requires golang"
-- id: commig-msg-checker
-  name: "Commig message checker"
+- id: commit-msg-checker
+  name: "Commit message checker"
   entry: python3 run-commit-msg-checker.py
   always_run: true
   stages:
