@@ -4,7 +4,7 @@
   files: '\.go$'
   language: "script"
   stages:
-    - pre-commit
+    - commit
   description: "Runs `gofumpt`, requires `mvdan.cc/gofumpt`"
 - id: go-imports
   name: "go imports"
@@ -12,7 +12,7 @@
   files: '\.go$'
   language: "script"
   stages:
-    - pre-commit
+    - commit
   description: "Runs `goimports`, requires `golang.org/x/tools/cmd/goimports`"
 - id: go-vet
   name: "go vet"
@@ -20,7 +20,7 @@
   files: '\.go$'
   language: "script"
   stages:
-    - pre-commit
+    - commit
   description: "Runs `go vet`, requires golang"
 - id: go-cyclo
   name: "go-cyclo"
@@ -28,7 +28,7 @@
   files: '\.go$'
   language: "script"
   stages:
-    - pre-commit
+    - commit
   description: "Runs `gocyclo`, requires `github.com/fzipp/gocyclo/cmd/gocyclo`"
   args:
     - "-over=15"
@@ -39,7 +39,7 @@
   language: "script"
   pass_filenames: false
   stages:
-    - pre-commit
+    - commit
   description: "Runs `golangci-lint`, requires `github.com/golangci/golangci-lint/cmd/golangci-lint`"
 - id: go-critic
   name: "go-critic"
@@ -47,7 +47,7 @@
   files: '\.go$'
   language: "script"
   stages:
-    - pre-commit
+    - commit
   description: "Runs `go-critic`, requires `github.com/go-critic/go-critic/cmd/gocritic`"
 - id: go-unit-tests
   name: "go-unit-tests"
@@ -55,7 +55,7 @@
   files: '\.go$'
   language: "script"
   stages:
-    - pre-commit
+    - commit
   description: "Runs `go test`, requires golang"
 - id: go-build
   name: "go-build"
@@ -63,7 +63,7 @@
   files: '\.go$'
   language: "script"
   stages:
-    - pre-commit
+    - commit
   description: "Runs `go build`, requires golang"
 - id: go-generate
   name: "go-generate"
@@ -71,7 +71,7 @@
   files: '\.go$'
   language: "script"
   stages:
-    - pre-commit
+    - commit
   description: "Runs `go generate`, requires golang"
 - id: go-mod-tidy
   name: "go-mod-tidy"
@@ -79,7 +79,7 @@
   files: '\.go$'
   language: "script"
   stages:
-    - pre-commit
+    - commit
   description: "Runs `go mod tidy -v`, requires golang"
 - id: commig-msg-checker
   name: "Commig message checker"
