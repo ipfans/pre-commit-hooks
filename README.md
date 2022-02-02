@@ -39,7 +39,7 @@ repos:
       - id: go-build
       - id: go-generate
       - id: go-mod-tidy
-      - id: commig-msg-checker
+      - id: commit-msg-checker
 ```
 
 ### installation
