@@ -26,7 +26,7 @@ Write `.pre-commit-config.yaml`:
 ```yaml
 repos:
   - repo: https://github.com/ipfans/pre-commit-hooks
-    rev: v0.1.0
+    rev: v0.1.3
     hooks:
       - id: go-fumpt
       - id: go-imports
